@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="logo">
+    <img src="assets/logo.png" alt="" />
+    <h1><%= APP_NAME %></h1>
+  </div>
+  <nav>
+    <ul>
+      <% if (user) { %>
+      <li onclick="openModal('add-reaction-type-modal')" class="btn-icon" title="Add New Reaction"><span>☺</span> Add</li>
+
+      <li onclick="openModal('post-modal')" class="btn-post"><span>＋</span> Post</li>
+
+      <li class="user-profile" onclick="openModal('profile-modal')">
+        <% if (user.profileImageUrl) { %>
+        <img src="<%= user.profileImageUrl %>" alt="Profile" class="profile-icon" />
+        <% } %> <%= user.username %>
+      </li>
+      <li id="signout-btn">signOut</li>
+      <% } else { %>
+      <li onclick="openModal('signin-modal')">signIn</li>
+      <li onclick="openModal('signup-modal')">signUp</li>
+      <% } %>
+    </ul>
+  </nav>
+</div>
+
+<%- include('components/modal/signin') %> <%- include('components/modal/signup') %> <%- include('components/modal/profile') %> <%- include('components/modal/post') %> <%- include('components/modal/add_reaction_type') %> <%- include('components/modal/reaction_picker') %>

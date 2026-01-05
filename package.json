@@ -1,0 +1,37 @@
+{
+  "name": "node06",
+  "version": "1.0.0",
+  "description": "JS23 課題 No.06 自由制作WEBアプリケーション",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moto060314/node06.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/moto060314/node06/issues"
+  },
+  "homepage": "https://github.com/moto060314/node06#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-mysql-session": "^3.0.3",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.16.0",
+    "nodemon": "^3.1.11",
+    "socket.io": "^4.8.3",
+    "uuid": "^13.0.0"
+  }
+}

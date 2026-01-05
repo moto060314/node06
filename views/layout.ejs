@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= APP_NAME %></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body data-current-user-id="<%= user ? user.id : '' %>">
+    <div class="wrapper">
+      <header><%- include('partials/header') %></header>
+      <main><%- body %></main>
+    </div>
+  </body>
+</html>

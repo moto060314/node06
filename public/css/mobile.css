@@ -1,0 +1,114 @@
+@media (max-width: 467px) {
+  .wrapper {
+    padding: 0.5rem;
+  }
+  header {
+    .container {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      .logo {
+        img {
+          height: 50px;
+        }
+        h1 {
+          font-size: 1.2rem;
+          margin-left: 0.5rem;
+        }
+      }
+      nav {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          gap: 0.1rem;
+          padding: 0 0 0 10px;
+          margin: 0;
+          padding-bottom: 5px;
+          li {
+            flex-shrink: 0;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 5px 12px;
+            &.btn-post {
+              border: none;
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .timeline {
+    margin: 1rem auto;
+    .post-card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      .post-header {
+        .post-user-info {
+          .post-avatar,
+          .post-avatar-placeholder {
+            width: 32px;
+            height: 32px;
+          }
+          .post-username {
+            font-size: 0.95rem;
+          }
+        }
+        .post-date {
+          font-size: 0.7rem;
+        }
+      }
+      .post-content {
+        p {
+          font-size: 1rem;
+        }
+      }
+      .post-reactions {
+        gap: 8px;
+        .reaction-badge {
+          padding: 4px 8px;
+        }
+      }
+    }
+  }
+  .modal {
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+      h2,
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+      form {
+        .form-group {
+          input,
+          .post-textarea {
+            padding: 10px;
+          }
+        }
+        .btn-primary {
+          padding: 12px;
+        }
+      }
+      .reaction-grid {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        .reaction-item {
+          img {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

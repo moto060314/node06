@@ -1,0 +1,32 @@
+<div id="profile-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('profile-modal')">&times;</span>
+    <h2>Edit Profile</h2>
+    <form id="profile-form">
+      <div class="form-group">
+        <label for="profile-username">Username</label>
+        <input type="text" id="profile-username" name="username" value="<%= user ? user.username : '' %>" required />
+      </div>
+      <div class="form-group">
+        <label for="profile-email">Email</label>
+        <input type="email" id="profile-email" name="email" value="<%= user ? user.email : '' %>" required />
+      </div>
+      <div class="form-group">
+        <label for="profile-image">Profile Image</label>
+        <input type="file" id="profile-image" name="profileImage" accept="image/*" />
+        <% if (user && user.profileImageUrl) { %>
+        <div class="current-profile-image-container">
+          <img src="<%= user.profileImageUrl %>" alt="Current Profile" class="current-profile-image" />
+        </div>
+        <% } %>
+      </div>
+      <hr class="modal-divider" />
+      <div class="form-group">
+        <label for="profile-password">New Password (leave blank to keep current)</label>
+        <input type="password" id="profile-password" name="password" />
+      </div>
+      <button type="submit" class="btn-primary">Update Profile</button>
+    </form>
+    <p class="error-message" id="profile-error"></p>
+  </div>
+</div>

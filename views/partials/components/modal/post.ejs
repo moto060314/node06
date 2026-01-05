@@ -1,0 +1,13 @@
+<div id="post-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('post-modal')">&times;</span>
+    <h2>What are you doing?</h2>
+    <form id="post-form">
+      <div class="form-group">
+        <textarea id="post-content" name="content" rows="4" placeholder="今、何してる？ (例: Node.jsの課題に取り組んでる！)" required class="post-textarea"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Post Doing</button>
+    </form>
+    <p class="error-message" id="post-error"></p>
+  </div>
+</div>
