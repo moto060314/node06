@@ -6,7 +6,7 @@ IH12A 17 中尾 元信
 
 **App URL**
 
-htpps://app.moto0314.com
+https://app.moto0314.com
 
 先生へ。<br>
 にて、先生の学校のアカウント：<br>
