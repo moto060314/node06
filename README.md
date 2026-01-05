@@ -8,10 +8,24 @@ IH12A 17 中尾 元信
 
 https://app.moto0314.com
 
-先生へ。<br>
+# 先生へ。<br>
+
 にて、先生の学校のアカウント：<br>
 yoshikawa.yohei@thi.hal.ac.jp<br>
-で接続できます。
+cloudflare の認証をクリアすれば接続できます。<br>
+メール認証に、outlook の登録？メール見ることが必要なので、お願いします。<br>
+
+それから、コラボレーターとして、<br>
+https://github.com/moto060314/node06<br>
+に招待しています。
+
+今回のプロジェクトはあえて、.env を ignore してません。<br>
+（セットアップを作るのがめんどくさくて...）<br>
+
+compose には、mysql, phpmyadmin, node.js が入ってます。<br>
+
+app.moto0314.com はアプリケーションの URL ですが、<br>
+別途、 https://sql.moto0314.com で今回のサーバーの phpmyadmin を公開しています。<br>
 
 **「『今、何やってる？』を、みんなの承認に変える。」**
 
