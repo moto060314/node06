@@ -70,6 +70,7 @@ socket.on('update_reactions', (data) => {
       const div = document.createElement('div');
       div.className = `reaction-badge ${isReactedByMe ? 'reacted' : ''}`;
       div.style.cursor = 'pointer';
+      div.dataset.title = reaction.name;
       div.onclick = () => toggleReaction(postId, reaction.id);
 
       div.innerHTML = `

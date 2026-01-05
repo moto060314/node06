@@ -309,6 +309,7 @@ header {
         gap: 5px;
         font-size: 0.9rem;
         cursor: pointer;
+        position: relative;
         &.reacted {
           background-color: #e3f2fd;
           border-color: #2196f3;
@@ -317,6 +318,28 @@ header {
           width: 20px;
           height: 20px;
           object-fit: contain;
+        }
+        &::after {
+          content: attr(data-title);
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          white-space: nowrap;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          z-index: 10;
+          margin-bottom: 5px;
+        }
+        &:hover::after {
+          opacity: 1;
+          visibility: visible;
         }
       }
       .btn-add-reaction {

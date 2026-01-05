@@ -20,7 +20,7 @@
 
     <div class="post-reactions" id="reactions-<%= post.id %>">
       <% if (post.reactions) { %> <% post.reactions.forEach(reaction => { %> <% const isReactedByMe = user && reaction.user_ids.includes(user.id); %>
-      <div class="reaction-badge <%= isReactedByMe ? 'reacted' : '' %>" onclick="toggleReaction('<%= post.id %>', '<%= reaction.type_id %>')">
+      <div class="reaction-badge <%= isReactedByMe ? 'reacted' : '' %>" onclick="toggleReaction('<%= post.id %>', '<%= reaction.type_id %>')" data-title="<%= reaction.name %>">
         <img src="<%= reaction.image_url %>" alt="<%= reaction.name %>" />
         <span><%= reaction.count %></span>
       </div>
