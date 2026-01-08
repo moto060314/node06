@@ -1,4 +1,4 @@
 node_modules/
 public/uploads/
 .DS_Store
-.admin_password
+.admin_password.txt
