@@ -1,15 +1,15 @@
 import pool from '../database/connect.js';
 
 const Post = {
-  async create(userId, content) {
+  async create(userId, content, imageUrl = null) {
     const connection = await pool.getConnection();
     try {
       await connection.beginTransaction();
 
       await connection.query('DELETE FROM posts WHERE user_id = ?', [userId]);
 
-      const query = 'INSERT INTO posts (user_id, content) VALUES (?, ?)';
-      const [result] = await connection.query(query, [userId, content]);
+      const query = 'INSERT INTO posts (user_id, content, image_url) VALUES (?, ?, ?)';
+      const [result] = await connection.query(query, [userId, content, imageUrl]);
 
       await connection.commit();
       return result.insertId;

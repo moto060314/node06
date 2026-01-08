@@ -292,6 +292,18 @@ header {
         color: #444;
         white-space: pre-wrap;
       }
+      .post-image-container {
+        margin-top: 10px;
+        width: 100%;
+        .post-image {
+          max-width: 100%;
+          max-height: 400px;
+          border-radius: 8px;
+          border: 1px solid #eee;
+          object-fit: contain;
+          background-color: #f9f9f9;
+        }
+      }
     }
     .post-reactions {
       margin-top: 1rem;

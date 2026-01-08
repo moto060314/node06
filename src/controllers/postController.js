@@ -9,12 +9,17 @@ const postController = {
 
       const { content } = req.body;
       const userId = req.session.user.id;
+      const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
       if (!content || content.trim() === '') {
         return res.status(400).json({ error: 'Content is required' });
       }
 
-      await Post.create(userId, content);
+      const newPostId = await Post.create(userId, content, imageUrl);
+
+      const fullPost = await Post.findByIdWithUser(newPostId);
+
+      req.io.emit('new_post', fullPost);
 
       res.status(201).json({ message: 'Post created successfully' });
     } catch (error) {

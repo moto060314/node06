@@ -4,7 +4,11 @@
     <h2>What are you doing?</h2>
     <form id="post-form">
       <div class="form-group">
-        <textarea id="post-content" name="content" rows="4" placeholder="今、何してる？ (例: Node.jsの課題に取り組んでる！)" required class="post-textarea"></textarea>
+        <textarea id="post-content" name="content" rows="4" placeholder="今、何してる？ ('cmd + enterでpost!)" required class="post-textarea"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="post-image" class="file-label">Image (Optional)</label>
+        <input type="file" id="post-image" name="image" accept="image/*" />
       </div>
       <button type="submit" class="btn-primary">Post Doing</button>
     </form>

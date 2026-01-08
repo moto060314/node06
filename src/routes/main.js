@@ -34,7 +34,7 @@ router.post('/api/auth/signin', authController.signin);
 router.post('/api/auth/signout', authController.signout);
 router.post('/api/auth/update', upload.single('profileImage'), authController.updateProfile);
 
-router.post('/api/posts/create', postController.create);
+router.post('/api/posts/create', upload.single('image'), postController.create);
 
 router.post('/api/reactions/types', upload.single('image'), reactionController.createType);
 router.get('/api/reactions/types', reactionController.getTypes);

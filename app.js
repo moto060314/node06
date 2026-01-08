@@ -58,6 +58,11 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use((req, res, next) => {
+  req.io = io;
+  next();
+});
+
+app.use((req, res, next) => {
   res.locals.APP_NAME = APP_NAME;
   res.locals.user = req.session.user || null;
   next();
