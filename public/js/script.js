@@ -19,6 +19,12 @@ const App = {
       return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
     },
 
+    linkify(text) {
+      if (!text) return text;
+      const escaped = this.escapeHtml(text);
+      return escaped.replace(/(https:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+    },
+
     async postFormData(url, formElement, onSuccess = null) {
       const formData = new FormData(formElement);
       try {
@@ -85,7 +91,7 @@ const App = {
       const postDate = new Date(post.created_at).toLocaleString();
       const avatarHtml = post.profile_image_url ? `<img src="${post.profile_image_url}" alt="${post.username}" class="post-avatar" />` : `<div class="post-avatar-placeholder">${post.username.charAt(0).toUpperCase()}</div>`;
 
-      const safeContent = App.Utils.escapeHtml(post.content);
+      const safeContent = App.Utils.linkify(post.content);
       const imageHtml = post.image_url ? `<div class="post-image-container"><img src="${post.image_url}" alt="Post Image" class="post-image" /></div>` : '';
 
       return `

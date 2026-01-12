@@ -15,7 +15,7 @@
       <span class="post-date"> <%= new Date(post.created_at).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' }) %> </span>
     </div>
     <div class="post-content">
-      <p><%= post.content %></p>
+      <p><%- linkify(post.content) %></p>
       <% if (post.image_url) { %>
       <div class="post-image-container">
         <img src="<%= post.image_url %>" alt="Post Image" class="post-image" />

@@ -65,6 +65,11 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   res.locals.APP_NAME = APP_NAME;
   res.locals.user = req.session.user || null;
+  res.locals.linkify = (text) => {
+    if (!text) return '';
+    const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    return escaped.replace(/(https:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+  };
   next();
 });
 
