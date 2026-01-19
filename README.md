@@ -11,7 +11,7 @@ https://app.moto0314.com
 # 先生へ。<br>
 
 にて、先生の学校のアカウント：<br>
-yoshikawa.yohei@thi.hal.ac.jp<br>
+@thi.hal.ac.jp<br>
 cloudflare の認証をクリアすれば接続できます。<br>
 メール認証に、outlook の登録？メール見ることが必要なので、お願いします。<br>
 
